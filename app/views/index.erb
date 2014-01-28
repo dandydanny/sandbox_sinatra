@@ -1,23 +1,53 @@
 <div class="container">
-  <h1>Welcome to Sinatra!</h1>
-  <p>Hello, world!</p>
+  <h2>Get</h2>
 
-  <table>
-    <tr>
-      <th>File Description</th>
-      <th>File Location</th>
-    </tr>
-    <tr>
-      <td>This view file</td>
-      <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The layout file</td>
-      <td><code><%= File.expand_path('../layout.erb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-    <tr>
-      <td>The current controller</td>
-      <td><code><%= File.expand_path('../../controllers/index.rb', __FILE__).gsub(Sinatra::Application.root, '') %></code></td>
-    </tr>
-  </table>
+  <form name="input" action="/cool_url" method="get">
+  First name (Get): <input type="text" name="firstname"><br>
+  <input type="radio" name="sex" value="male">Male<br>
+  <input type="radio" name="sex" value="female">Female<br>
+  <textarea rows="10" cols="30" name="bunchoftext">
+  Your thoughts?
+  </textarea><br>
+  <select name="cars"><br>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat" selected>Fiat</option>
+  <option value="audi">Audi</option>
+  </select><br>
+  <input type="checkbox" name="vehicle1" value="Bike">I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car">I have a car<br>
+  <!-- Submit <input type="submit" name="lastname"> -->
+  <input type="text" name="post[title]"><br>
+  <input type="text" name="post[price]"><br>
+  <textarea name="post[description]"></textarea></br>
+  <input type="submit" value="Submit">
+  </form>
+
+<br>
+  <h2>Post</h2>
+  <form name="input" action="/cool_url" method="post">
+  First name (Get): <input type="text" name="firstname"><br>
+  <input type="radio" name="sex" value="male">Male<br>
+  <input type="radio" name="sex" value="female">Female<br>
+  <textarea rows="10" cols="30" name="bunchoftext">
+  Your thoughts?
+  </textarea><br>
+  <select name="cars"><br>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="fiat" selected>Fiat</option>
+  <option value="audi">Audi</option>
+  </select><br>
+  <input type="checkbox" name="vehicle1" value="Bike">I have a bike<br>
+  <input type="checkbox" name="vehicle2" value="Car">I have a car<br>
+  <!-- Submit <input type="submit" name="lastname"> -->
+  <input type="submit" value="Submit">
+  </form>
+
 </div>
+
+
+
+
+
+  # <td><code><%= __FILE__.gsub(Sinatra::Application.root, '') %></code></td>
